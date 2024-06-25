@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist Barang</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Wishlist Barang</h1>
+        
+        <div class="mb-4">
+            <label for="nameInput" class="form-label">Nama Barang</label>
+            <input type="text" id="nameInput" class="form-control" placeholder="Nama Barang">
+
+            <label for="priceInput" class="form-label mt-3">Harga Barang</label>
+            <input type="number" id="priceInput" class="form-control" placeholder="Harga Barang">
+
+            <label for="linkInput" class="form-label mt-3">Link Barang dari e-Commerce</label>
+            <input type="text" id="linkInput" class="form-control" placeholder="Link Barang">
+
+            <label for="categoryInput" class="form-label mt-3">Kategori Barang</label>
+            <select id="categoryInput" class="form-select">
+                <option value="Primer">Primer</option>
+                <option value="Sekunder">Sekunder</option>
+                <option value="Tersier">Tersier</option>
+            </select>
+
+            <button id="addItemBtn" class="btn btn-primary mt-4">Tambah Barang</button>
+        </div>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nama Barang</th>
+                    <th>Harga Barang</th>
+                    <th>Link</th>
+                    <th>Kategori</th>
+                    <th>Jumlah</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="wishlistTable">
+                <!-- Daftar barang akan ditambahkan di sini -->
+            </tbody>
+        </table>
+
+        <div class="mt-4">
+            <h3>Total Harga: Rp<span id="totalPrice">0</span></h3>
+        </div>
+
+        <div class="mt-4">
+            <label for="dailySavingInput" class="form-label">Nominal Tabungan Harian</label>
+            <input type="number" id="dailySavingInput" class="form-control" placeholder="Nominal Tabungan">
+            <button id="calculateBtn" class="btn btn-success mt-2">Hitung Estimasi Waktu</button>
+        </div>
+
+        <div class="mt-4">
+            <h2>Estimasi Waktu Pembelian</h2>
+            <ul id="estimateList" class="list-group">
+                <!-- Estimasi waktu akan ditampilkan di sini -->
+            </ul>
+        </div>
+
+        <div class="mt-4">
+            <label for="whatsappInput" class="form-label">Nomor WhatsApp</label>
+            <input type="text" id="whatsappInput" class="form-control" placeholder="Nomor WhatsApp">
+            <button id="sendWhatsappBtn" class="btn btn-success mt-2">Kirim ke WhatsApp</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
